@@ -1,0 +1,68 @@
+:root{
+     --primary: orange;
+     --secondary: rgb(6, 49, 6);
+     --dark:rgb(10, 10, 61) ;
+      --light: #f8f9fa;
+     --brown:#693d0d; 
+      --text-color: #333;
+
+      --font-title: 'Poppins', sans-serif;
+    --font-text: 'Roboto', sans-serif;
+
+    --padding: 20px;
+    --margin: 20px;
+
+}
+/* universel */ 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+    
+    /* CORPS */
+
+body{
+    font-family: var(--font-text);
+    background-color: var(--light);
+    color: var(--text-color);
+}
+
+/* TITRES */
+h1,h2,h3 {
+    font-family: var(--font-title);
+    margin-bottom: var(--margin);
+    text-align: center;
+    color: var(--dark);
+}
+
+  /* EN TÊTE */
+
+  header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:var(--padding);
+     background-color: var(--brown);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+      /* LIENS */
+nav{
+    display: flex;
+}
+
+nav a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: var(--dark);
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+   
+
+
