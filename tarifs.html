@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afritalent-tarifs</title>
-    <link rel="stylesheet" href="css/style.css">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(255, 255, 255, 0.15) ; backdrop-filter: blur(8px) saturate(190%); -webkit-backdrop-filter: blur(8px) saturate(190%); border-bottom: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);">
         <div class="container">
 
             <a class="navbar-brand" href="tarifs.html">
@@ -42,42 +42,42 @@
         </div>
     </nav>
 </header>
-      <main>
-    <section>
+    <main class="container my-5 pt-5">
+    <section class="py-5">
 
-    <h2>Tarifs</h2>
-    <div>
-        <div>
-            <div>
-                <div>
-                <h4>Gratuit</h4>
+    <h2 class="text-center mb-5">Tarifs</h2>
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0 custom-card text-center p-4">
+                <div class="card-body">
+                <h4 class="fw-bold">Gratuit</h4>
                   <p>0€/mois</p>
                    <p>✔ Basique</p>
                    <p>✖ Support</p>
-                   <button>choisir</button>
+                   <button class="btn btn-outline-dark w-100 rounded-pill">choisir</button>
             </div>
         </div>
         </div>
-        <div>
-            <div>
-            <div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow border-primary custom-card text-center p-4" style="border-width: 2px;">
+            <div class="card-body">
                 <h4>Pro</h4>
                   <p>20€/mois</p>
                    <p>✔ Tout</p>
                    <p>✔ Support</p>
-                   <button>choisir</button>
+                   <button class="btn btn-afritalent w-100 rounded-pill">choisir</button>
             </div>
             </div>
             </div>
 
-            <div>
-            <div>
-            <div>
+            <div class="col-md-4">
+            <div class="card h-100 shadow border-primary custom-card text-center p-4" style="border-width: 2px;">
+            <div class="card-body">
                 <h4>Entyreprises</h4>
                   <p>50€/mois</p>
                    <p>✔ Complet</p>
                    <p>✔ Equipe</p>
-                   <button>choisir</button>
+                   <button class="btn btn-outline-dark w-100 rounded-pill">choisir</button>
             </div>
             </div>
             </div>
@@ -85,61 +85,61 @@
     </section>
           
        <!-- FAQ -->
-        <hr>
+        <hr class="my-5">
 
-    <section>
+    <section class="py-5">
 
-    <h3 >FAQ</h3>
+    <h3 class="text-center mb-4" >FAQ</h3>
 
-      <div>
+      <div class="accordion accordion-flush mx-auto" id="faqAccordion" style="max-width: 800px;">
 
-        <div>
-            <h2>
-                <button>Comment fonctionne la plateforme ?</button>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Comment fonctionne la plateforme ?</button>
             </h2>
 
-            <div>
-                <div>Vous pouvez publier ou trouver des services freelances facilement.</div>
+            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Vous pouvez publier ou trouver des services freelances facilement.</div>
              </div>
         </div>
 
-        <div>
-            <h2>
-                <button>Est-ce gratuit?</button>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Est-ce gratuit?</button>
             </h2>
 
-            <div>
-                <div>Oui, il existe un plan gratuit avec des fonctionnalités limitées.</div>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Oui, il existe un plan gratuit avec des fonctionnalités limitées.</div>
             </div>
         </div>
 
-        <div>
-            <h2>
-                <button>Comment payer?</button>
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Comment payer?</button>
             </h2>
 
-            <div>
-                <div>Vous pouvez payer mensuellement via carte bancaire.</div>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">Vous pouvez payer mensuellement via carte bancaire.</div>
             </div>
         </div>
 
-        <div>
-            <h2>
-                <button>Puis-je changer de plan?</button>
+        <div class="accordion-item">
+            <h2 lass="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Puis-je changer de plan?</button>
             </h2>
 
-            <div>
-                <div >Oui, vous pouvez changer de plan à tout moment.</div>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body" >Oui, vous pouvez changer de plan à tout moment.</div>
             </div>
         </div>
 
-        <div>
-            <h2>
-                <button>Le support est-il disponible?</button>
+        <div class="accordion-item">
+            <h2 lass="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Le support est-il disponible?</button>
             </h2>
 
-            <div>
-                <div>Oui, le support est disponible selon votre plan.</div>
+            <div  id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div  class="accordion-body" >Oui, le support est disponible selon votre plan.</div>
             </div>
         </div>
 
@@ -151,9 +151,10 @@
    </main>
   
       <!-- PIED -->
+
      <footer>
-         <img src="Images/Afritalent.baobab (1).png" alt="wawa" width="150px">
-         <p>© 2026 AfriTalent</p>
+        <img src="Images/Afritalent.baobab (1).png" alt="wawa" width="200px">
+        <p>© 2026 AfriTalent</p>
      </footer>
 
     
