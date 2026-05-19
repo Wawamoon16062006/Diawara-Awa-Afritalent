@@ -9,187 +9,164 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
- <header>
-   <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: rgba(255, 255, 255, 0.15) ; backdrop-filter: blur(8px) saturate(190%); -webkit-backdrop-filter: blur(8px) saturate(190%); border-bottom: 1px solid rgba(255, 255, 255, 0.25); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);">
+<header>
+   <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: transparent; box-shadow: none; border: none;">
         <div class="container">
-
-            <a class="navbar-brand" href="freelances.htmls">
-                <img src="Images/Afritalent.baobab (1).png"
-                     alt="Logo AfriTalent"
-                     width="120">
+            <a class="navbar-brand" href="freelances.html">
+                <img src="Images/Afritalent.baobab (1).png" alt="Logo AfriTalent" width="150">
             </a>
-
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#menu">
-
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="menu">
-
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="index.html">Accueil</a>
+                    <a class="nav-link active" href="index.html">Accueil</a>
                     <a class="nav-link" href="freelances.html">Freelances</a>
                     <a class="nav-link" href="tarifs.html">Tarifs</a>
                     <a class="nav-link" href="about.html">À propos</a>
                     <a class="nav-link" href="contact.html">Contact</a>
                 </div>
-
             </div>
-
         </div>
     </nav>
 </header>
 
-      <main class="momo" style="padding-top: 80px;"> 
-         <!-- NOS Freelances -->
-          
-          <section class="container my-5">
-            <h2 class="text-center mb-4 text-white">Freelances</h2>
-              <div class="text-center mb-5">
+<main class="momo"> 
+    
+    
+    <section class="container mt-0 mb-5">
+        <h2 class="text-center mb-4 text-white pt-3">Freelances</h2> 
+        <div class="text-center mb-5">
             <select class="form-select w-auto d-inline-block" id="categorie">
                 <option value="all">Tous</option>
                 <option value="design">Design</option>
                 <option value="dev">Développement</option>
                 <option value="marketing">Marketing</option>
             </select>
-          </div>
-                  <!-- Carte 1 -->
-
-          <div class="row g-4">
-            <div class="col-12 col-md-6 col-lg-3">
+        </div>
+        
+        
+        <div class="row g-3 g-md-4 mb-4">
+            <!-- Carte 1 -->
+            <div class="col-6 col-lg-3">
                 <div class="card h-100 custom-card">
-                <img src="Images/manu.jpg"  alt="printa"  class="card-img-top" width="150px" >
-                <div class="card-body text-center">
-                    <h5>Printa Savior</h5>
-                    <p>Graphiste</p>
-                    <p>15€/h⭐⭐⭐⭐</p>
-                    <button class="btn btn-afritalent">Voir</button>
+                    <img src="Images/manu.jpg" alt="printa" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Printa Savior</h5>
+                        <p class="mb-1 small">Graphiste</p>
+                        <p class="text-warning small mb-3">15€/h ⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
-         
-         
-
-          <!-- CARTE 2 -->
-
-           <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/Taechung.webp" alt="V" class="card-img-top" width="150px">
-                <div class="card-body text-center">
-                    <h5>Taechung Diawara</h5>
-                    <p>Developpeur</p>
-                    <p>30€/h⭐⭐⭐⭐⭐</p>
-                    <button class="btn btn-afritalent">Voir</button>
+            <!-- Carte 2 -->
+            <div class="col-6 col-lg-3">
+                <div class="card h-100 custom-card">
+                    <img src="Images/Taechung.webp" alt="V" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Taechung Diawara</h5>
+                        <p class="mb-1 small">Developpeur</p>
+                        <p class="text-warning small mb-3">30€/h ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
-          <!-- CARTE 3 -->
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/Mr beast.jpg" alt="beast" class="card-img-top" width="150px">
-                <div  class="card-body text-center">
-                    <h5>Beast Diop</h5>
-                    <p>Marketing</p>
-                    <p>18€/h⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+            <!-- Carte 3 -->
+            <div class="col-6 col-lg-3">
+                <div class="card h-100 custom-card">
+                    <img src="Images/Mr beast.jpg" alt="beast" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Beast Diop</h5>
+                        <p class="mb-1 small">Marketing</p>
+                        <p class="text-warning small mb-3">18€/h ⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
-          
-          <!-- CARTE 4 -->
-
-          <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/ariana.jpg" alt="grande"  class="card-img-top" width="150px">
-                <div  class="card-body text-center">
-                    <h5>Ariana Traore</h5>
-                    <p>Designer</p>
-                    <p>35€/h⭐⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+            <!-- Carte 4 -->
+            <div class="col-6 col-lg-3">
+                <div class="card h-100 custom-card">
+                    <img src="Images/ariana.jpg" alt="grande" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Ariana Traore</h5>
+                        <p class="mb-1 small">Designer</p>
+                        <p class="text-warning small mb-3">35€/h ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
+        </div>
 
-          <!-- carte 5 -->
-
-           <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/idriss damso.jpg" alt="damso"  class="card-img-top" width="150px">
-                <div class="card-body text-center">
-                    <h5>Idriss Damso Diawara</h5>
-                    <p>CEO</p>
-                    <p>23€/h⭐⭐⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+    
+        <div class="row g-3 g-md-4 mb-4 justify-content-lg-center">
+            <!-- Carte 5 -->
+            <div class="col-6 col-lg-4" style="max-width: 300px;"> <!-- max-width optionnel pour garder la même taille de carte que la ligne du haut -->
+                <div class="card h-100 custom-card">
+                    <img src="Images/idriss damso.jpg" alt="damso" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Idriss Damso Diawara</h5>
+                        <p class="mb-1 small">CEO</p>
+                        <p class="text-warning small mb-3">23€/h ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
-
-          <!-- CARTE 6 -->
-
-            <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/jude.jpg" alt="beast"  class="card-img-top" width="150px">
-                <div class="card-body text-center">
-                    <h5>Jude Diawara</h5>
-                    <p>Lead developer & architecte</p>
-                    <p>20€/h⭐⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+            <!-- Carte 6 -->
+            <div class="col-6 col-lg-4" style="max-width: 300px;">
+                <div class="card h-100 custom-card">
+                    <img src="Images/jude.jpg" alt="jude" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Jude Diawara</h5>
+                        <p class="mb-1 small text-truncate" title="Lead developer & architecte">Lead developer...</p>
+                        <p class="text-warning small mb-3">20€/h ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
-
-          <!-- CARTE 7 -->
-
-            <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/Wawa.jpeg" alt="beast"  class="card-img-top"  width="150px">
-                <div class="card-body text-center">
-                    <h5>Awa Diawara</h5>
-                    <p>data stientist</p>
-                    <p>50€/h⭐⭐⭐⭐⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+            <!-- Carte 7 -->
+            <div class="col-6 col-lg-4" style="max-width: 300px;">
+                <div class="card h-100 custom-card">
+                    <img src="Images/Wawa.jpeg" alt="awa" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Awa Diawara</h5>
+                        <p class="mb-1 small">Data Scientist</p>
+                        <p class="text-warning small mb-3">50€/h ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
+        </div>
 
-          <!-- CARTE 8 -->
-
-            <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/Mariam.jpeg" alt="beast"  class="card-img-top" width="150px">
-                <div class="card-body text-center">
-                    <h5>Mariam Traore</h5>
-                    <p>developpeur</p>
-                    <p>50€/h⭐⭐⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+        
+        <div class="row g-3 g-md-4 justify-content-lg-center">
+            <!-- Carte 8 -->
+            <div class="col-6 col-lg-4" style="max-width: 300px;">
+                <div class="card h-100 custom-card">
+                    <img src="Images/Mariam.jpeg" alt="mariam" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Mariam Traore</h5>
+                        <p class="mb-1 small">Developpeur</p>
+                        <p class="text-warning small mb-3">50€/h ⭐⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
-
-          <!-- CARTE 9 -->
-
-            <div class="col-12 col-md-6 col-lg-3">
-            <div class="card h-100 custom-card">
-                <img src="Images/jibril.jpeg" alt="beast"  class="card-img-top" width="150px">
-                <div class="card-body text-center">
-                    <h5>Jibril Diawara</h5>
-                    <p>designer</p>
-                    <p>40€/h⭐⭐⭐⭐</p>
-                    <button  class="btn btn-afritalent">Voir</button>
+            <!-- Carte 9 -->
+            <div class="col-6 col-lg-4" style="max-width: 300px;">
+                <div class="card h-100 custom-card">
+                    <img src="Images/jibril.jpeg" alt="jibril" class="card-img-top" style="height: 180px; object-fit: cover;">
+                    <div class="card-body text-center p-2 p-md-3">
+                        <h5 class="fs-6 fs-md-5">Jibril Diawara</h5>
+                        <p class="mb-1 small">Designer</p>
+                        <p class="text-warning small mb-3">40€/h ⭐⭐⭐⭐</p>
+                        <button class="btn btn-afritalent w-100 btn-sm">Voir</button>
+                    </div>
                 </div>
             </div>
-          </div>
+        </div>
 
-           </div>
-          </section>
-         
-          </main>
-
-            <!-- PIED -->
+    </section>
+</main>
    <!-- PIED -->
      <footer>
         <img src="Images/Afritalent.baobab (1).png" alt="wawa" width="200px">
