@@ -30,115 +30,118 @@
         </div>
     </nav>
 </header>
-   
-    <main class="container my-5 pt-5">
+   <main class="container my-5 pt-5">
+    <!-- SECTION TARIFS -->
     <section class="py-5">
-
-    <h2 class="text-center mb-5">Tarifs</h2>
-    <div class="row g-4 justify-content-center">
-        <div class="col-md-4">
-            <div class="card h-100 shadow-sm border-0 custom-card text-center p-4">
-                <div class="card-body">
-                <h4 class="fw-bold">Gratuit</h4>
-                  <p>0€/mois</p>
-                   <p>✔ Basique</p>
-                   <p>✖ Support</p>
-                   <button class="btn btn-outline-dark w-100 rounded-pill">choisir</button>
-            </div>
-        </div>
-        </div>
-        <div class="col-md-4">
-            <div class="card h-100 shadow border-primary custom-card text-center p-4" style="border-width: 2px;">
-            <div class="card-body">
-                <h4>Pro</h4>
-                  <p>20€/mois</p>
-                   <p>✔ Tout</p>
-                   <p>✔ Support</p>
-                   <button class="btn btn-afritalent w-100 rounded-pill">choisir</button>
-            </div>
-            </div>
-            </div>
-
+        <h2 class="text-center mb-5">Tarifs</h2>
+        <div class="row g-4 justify-content-center">
+            
+            <!-- Plan Gratuit -->
             <div class="col-md-4">
-            <div class="card h-100 shadow border-primary custom-card text-center p-4" style="border-width: 2px;">
-            <div class="card-body">
-                <h4>Entyreprises</h4>
-                  <p>50€/mois</p>
-                   <p>✔ Complet</p>
-                   <p>✔ Equipe</p>
-                   <button class="btn btn-outline-dark w-100 rounded-pill">choisir</button>
+                <div class="card h-100 shadow-sm border-0 custom-card text-center p-4" id="mariam">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Gratuit</h4>
+                        <p>0€/mois</p>
+                        <p>✔ Basique</p>
+                        <p>✖ Support</p>
+                        <button class="btn btn-outline-dark w-100 rounded-pill">Choisir</button>
+                    </div>
+                </div>
             </div>
+
+            <!-- Plan Pro -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow border-primary custom-card text-center p-4" style="border-width: 2px;" id="mariam">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Pro</h4>
+                        <p>20€/mois</p>
+                        <p>✔ Tout</p>
+                        <p>✔ Support</p>
+                        <button class="btn btn-afritalent w-100 rounded-pill">Choisir</button>
+                    </div>
+                </div>
             </div>
+
+            <!-- Plan Entreprises -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow border-primary custom-card text-center p-4" style="border-width: 2px;" id="mariam">
+                    <div class="card-body">
+                        <h4 class="fw-bold">Entreprises</h4>
+                        <p>50€/mois</p>
+                        <p>✔ Complet</p>
+                        <p>✔ Équipe</p>
+                        <button class="btn btn-outline-dark w-100 rounded-pill">Choisir</button>
+                    </div>
+                </div>
             </div>
-    </div>
+            
+        </div>
     </section>
-          
-       <!-- FAQ -->
-        <hr class="my-5">
+         
+    <!-- LIGNE DE SÉPARATION -->
+    <hr class="my-5">
 
+    <!-- SECTION FAQ -->
     <section class="py-5">
+        <h3 class="text-center mb-4">FAQ</h3>
 
-    <h3 class="text-center mb-4" >FAQ</h3>
+        <div class="accordion accordion-flush mx-auto" id="faqAccordion" style="max-width: 800px;">
 
-      <div class="accordion accordion-flush mx-auto" id="faqAccordion" style="max-width: 800px;">
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Comment fonctionne la plateforme ?</button>
-            </h2>
-
-            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Vous pouvez publier ou trouver des services freelances facilement.</div>
-             </div>
-        </div>
-
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Est-ce gratuit?</button>
-            </h2>
-
-            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Oui, il existe un plan gratuit avec des fonctionnalités limitées.</div>
+            <!-- Question 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">Comment fonctionne la plateforme ?</button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Vous pouvez publier ou trouver des services freelances facilement.</div>
+                </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Comment payer?</button>
-            </h2>
-
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body">Vous pouvez payer mensuellement via carte bancaire.</div>
+            <!-- Question 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Est-ce gratuit ?</button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Oui, il existe un plan gratuit avec des fonctionnalités limitées.</div>
+                </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 lass="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Puis-je changer de plan?</button>
-            </h2>
-
-            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div class="accordion-body" >Oui, vous pouvez changer de plan à tout moment.</div>
+            <!-- Question 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Comment payer ?</button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Vous pouvez payer mensuellement via carte bancaire.</div>
+                </div>
             </div>
-        </div>
 
-        <div class="accordion-item">
-            <h2 lass="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">Le support est-il disponible?</button>
-            </h2>
-
-            <div  id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                <div  class="accordion-body" >Oui, le support est disponible selon votre plan.</div>
+            <!-- Question 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Puis-je changer de plan ?</button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Oui, vous pouvez changer de plan à tout moment.</div>
+                </div>
             </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Le support est-il disponible ?</button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Oui, le support est disponible selon votre plan.</div>
+                </div>
+            </div>
+
         </div>
-
-    </div>
-
-</div>
-
-</section>
-   </main>
-  
+    </section>  
+</main> 
+    
+   
       <!-- PIED -->
 
      <footer>
