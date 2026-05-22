@@ -479,6 +479,64 @@ h2 {
     background-color: var(--secondary);
     color: var(--light);
 }
+/*STYLE DARK MODE  */
+
+body {
+    transition: background-color 0.4s ease;
+}
+
+
+body.dark {
+    background-color: #000000;
+}
+
+body.dark header ~ *, 
+body.dark section, 
+body.dark .hero, 
+body.dark footer {
+    filter: brightness(0.6);
+    transition: filter 0.4s ease;
+}
+.nav-link {
+    color: #ffffff;
+}
+
+
+/* STYLE POUR LE SCROLL */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.navbar.navbar-custom-scroll {
+    background-color: var(--secondary); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* ACCESSOIRES (Bouton Retour en haut & Bouton Mode) */
+
+#btnRetour {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none; 
+}
 /* FOOTER */
 footer {
     padding: 30px 8%;
