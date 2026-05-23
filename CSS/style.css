@@ -537,6 +537,49 @@ body.dark footer {
     cursor: pointer;
     display: none; 
 }
+/* FADE IN */
+
+
+.section-cachee {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+.section-cachee.section-visible {
+    opacity: 1;
+    transform: translateY(0); 
+}
+
+
+/*COMPTEURS DE STATISTIQUES */
+ .hero {
+   
+    padding: 140px 8% 80px 8%; 
+ }
+
+.hero-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 35px;
+}
+
+
+.compteur {
+    font-family: var(--font-title);
+    font-size: clamp(2rem, 3.5vw, 3rem); 
+    font-weight: 900;
+    color: var(--primary); 
+    margin: 0;
+    line-height: 1;
+}
+
+.stat-item p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    font-weight: 500;
+}
 /* FOOTER */
 footer {
     padding: 30px 8%;
