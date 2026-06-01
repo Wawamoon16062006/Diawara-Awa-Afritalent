@@ -1,215 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afritalent-Accueil</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header>
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="Images/Afritalent.baobab (1).png" alt="Logo AfriTalent" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+    <!-- Les liens du navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="Images/Afritalent_baobab.png" alt="Logo AfriTalent" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="menu">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" href="index.html">Accueil</a>
-                    <a class="nav-link" href="freelances.html">Freelances</a>
-                    <a class="nav-link" href="tarifs.html">Tarifs</a>
-                    <a class="nav-link" href="about.html">À propos</a>
-                    <a class="nav-link" href="contact.html">Contact</a>
-                     <button id="btnMode" class="btn btn-outline-light btn-sm ms-2">Mode Sombre</button>
-                </div>
-            </div>
-        </div>
-    </nav>
-</header>
-
-<main>
-    <section class="hero section-cachee">
-        <div class="container">
-            
-            <div class="carre">
-                <span class="hero-subtitle">BIENVENUE SUR AFRITALENT.</span>
-                <h1>Connectez-vous aux <br>meilleurs freelances <br><span class="text-gradient">africains</span></h1>
-                
-                <p class="hero-lead">Une plateforme simple et rapide pour trouver, collaborer et travailler avec des talents qualifiés dans toute l'Afrique.</p>
-                
-                <ul class="hero-list">
-                    <li>Freelances certifiés</li>
-                    <li>Projets variés</li>
-                    <li>Paiements sécurisés</li>
-                    <li>Support local</li>
-                </ul>
-
-                <div class="hero-button">
-                    <button class="button-primary">Recruter</button>
-                    <button class="button-second">Trouver un job</button>
-                </div>
-            </div>
-
-        </div>
-   
-    <!-- STATISTIUQES -->
-     
-                <div class="hero-stats" style="display: flex; gap: 40px; margin-top: 30px;">
-                    <div class="stat-item">
-                      
-                        <h2 class="compteur" data-valeur="500" data-suffixe="+">0</h2>
-                        <p style="color: #b0b0b0; margin: 0;">Freelances inscrits</p>
-                    </div>
-                    <div class="stat-item">
-                        <h2 class="compteur" data-valeur="120" data-suffixe="">0</h2>
-                        <p style="color: #b0b0b0; margin: 0;">Projets terminés</p>
+                <div class="collapse navbar-collapse" id="menu">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                        <a class="nav-link" href="freelances.html">Freelances</a>
+                        <a class="nav-link" href="tarifs.html">Tarifs</a>
+                        <a class="nav-link" href="about.html">À propos</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                        <button id="btnMode" class="btn btn-outline-light btn-sm ms-2">Mode Sombre</button>
                     </div>
                 </div>
             </div>
+        </nav>
+    </header>
+    <!-- La partie principale de la page d'accueil -->
+    <main>
+        <section class="hero section-cachee">
+            <div class="container">
 
-        </div>
-    </section>
+                <div class="carre">
+                    <span class="hero-subtitle">BIENVENUE SUR AFRITALENT.</span>
+                    <h1>Connectez-vous aux <br>meilleurs freelances <br><span class="text-gradient">africains</span>
+                    </h1>
 
+                    <p class="hero-lead">Une plateforme simple et rapide pour trouver, collaborer et travailler avec des
+                        talents qualifiés dans toute l'Afrique.</p>
 
-          <!-- COMMENT CA MARCHE -->
-      <section class="barbacue">
-        <div class="section">
-            <h2>Comment ça marche</h2>
-        </div>
+                    <ul class="hero-list">
+                        <li>Freelances certifiés</li>
+                        <li>Projets variés</li>
+                        <li>Paiements sécurisés</li>
+                        <li>Support local</li>
+                    </ul>
 
-        <div class="bento-grid">
-            <div class="card">
-                <h3>1. INSCRIPTION</h3>
-                <p>Créez un compte gratuitement en quelques clics pour rejoindre la communauté.</p>
-            </div>
-
-            <div class="card">
-                <h3>2. RECHERCHE</h3>
-                <p>Explorez les profils certifiés ou publiez vos offres de mission.</p>
-            </div>
-
-            <div class="card">
-                <h3>3. COLLABORATION</h3>
-                <p>Discutez, partagez vos fichiers et travaillez ensemble facilement.</p>
-            </div>
-
-            <div class="card">
-                <h3>4. PAIEMENT SÉCURISÉ</h3>
-                <p>Finalisez vos projets et payez en toute sécurité via nos partenaires locaux.</p>
-            </div>
-        </div> 
-    </section>
-
-   <section class="barbacue py-5">
-    <div class="container">
-        
-        <h2 class="text-center mb-5 titre-categories">Catégories</h2> 
-
-        <div class="row g-4 justify-content-center"> 
-            
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
-                    <h3 class="h5 mb-0">Développement web</h3>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
-                    <h3 class="h5 mb-0">Design UI/UX</h3>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
-                    <h3 class="h5 mb-0">Marketing Digital</h3>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
-                    <h3 class="h5 mb-0">DATA & IA</h3>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
-                    <h3 class="h5 mb-0">Rédaction TECH</h3>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
-                    <h3 class="h5 mb-0">DevOPS & Cloud</h3>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-    <!-- SECTION TEMOIGNAGES  -->
-<section class="awa py-5" id="temoignages">
-    <div class="container">
-        <h2 class="text-center mb-5">Témoignages</h2>
-        
-        
-        <div class="carousel slide carousel-sans-js">
-            
-            <!-- Zone des diapositives -->
-            <div class="carousel-inner d-flex">
-                
-                <div class="carousel-item active" id="temoin-1">
-                    <div class="card text-center p-5 shadow-sm border-light bg-transparent text-white">
-                        <p class="fs-4 fst-italic">"Très bon service, j'ai trouvé mon développeur en quelques heures !"</p>
+                    <div class="hero-button">
+                        <button class="button-primary">Recruter</button>
+                        <button class="button-second">Trouver un job</button>
                     </div>
                 </div>
 
-                <div class="carousel-item" id="temoin-2">
-                    <div class="card text-center p-5 shadow-sm border-light bg-transparent text-white">
-                        <p class="fs-4 fst-italic">"Plateforme très utile pour dénicher des experts certifiés en Afrique."</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item" id="temoin-3">
-                    <div class="card text-center p-5 shadow-sm border-light bg-transparent text-white">
-                        <p class="fs-4 fst-italic">"Une expérience fluide, sécurisée. Je recommande vivement AfriTalent."</p>
-                    </div>
-                </div>
-                
             </div>
 
-    
-            <div class="carousel-indicators-css">
-                <a href="#temoin-1" class="dot-indicator"></a>
-                <a href="#temoin-2" class="dot-indicator"></a>
-                <a href="#temoin-3" class="dot-indicator"></a>
+            <!-- STATISTIUQES -->
+
+            <div class="hero-stats" style="display: flex; gap: 40px; margin-top: 30px;">
+                <div class="stat-item">
+
+                    <h2 class="compteur" data-valeur="500" data-suffixe="+">0</h2>
+                    <p style="color: #b0b0b0; margin: 0;">Freelances inscrits</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="compteur" data-valeur="120" data-suffixe="">0</h2>
+                    <p style="color: #b0b0b0; margin: 0;">Projets terminés</p>
+                </div>
             </div>
 
-        </div>
-    </div>
-</section>
 
-</main>
+        </section>
+
+
+        <!-- COMMENT CA MARCHE -->
+        <section class="barbacue">
+            <div class="section">
+                <h2>Comment ça marche</h2>
+            </div>
+
+            <div class="bento-grid">
+                <div class="card">
+                    <h3>1. INSCRIPTION</h3>
+                    <p>Créez un compte gratuitement en quelques clics pour rejoindre la communauté.</p>
+                </div>
+
+                <div class="card">
+                    <h3>2. RECHERCHE</h3>
+                    <p>Explorez les profils certifiés ou publiez vos offres de mission.</p>
+                </div>
+
+                <div class="card">
+                    <h3>3. COLLABORATION</h3>
+                    <p>Discutez, partagez vos fichiers et travaillez ensemble facilement.</p>
+                </div>
+
+                <div class="card">
+                    <h3>4. PAIEMENT SÉCURISÉ</h3>
+                    <p>Finalisez vos projets et payez en toute sécurité via nos partenaires locaux.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CATEGORIES -->
+        <section class="barbacue py-5">
+            <div class="container">
+
+                <h2 class="text-center mb-5 titre-categories">Catégories</h2>
+
+                <div class="row g-4 justify-content-center">
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
+                            <h3 class="h5 mb-0">Développement web</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
+                            <h3 class="h5 mb-0">Design UI/UX</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
+                            <h3 class="h5 mb-0">Marketing Digital</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
+                            <h3 class="h5 mb-0">DATA & IA</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
+                            <h3 class="h5 mb-0">Rédaction TECH</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 text-center p-4 bg-transparent titre-categories border-light">
+                            <h3 class="h5 mb-0">DevOPS & Cloud</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TEMOIGNAGES  -->
+        <section class="awa py-5" id="temoignages">
+            <div class="container">
+                <h2 class="text-center mb-5">Témoignages</h2>
+
+
+                <div class="carousel slide carousel-sans-js">
+
+                    <!-- Zone des diapositives -->
+                    <div class="carousel-inner d-flex">
+
+                        <div class="carousel-item active" id="temoin-1">
+                            <div class="card text-center p-5 shadow-sm border-light bg-transparent text-white">
+                                <p class="fs-4 fst-italic">"Très bon service, j'ai trouvé mon développeur en quelques
+                                    heures !"</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" id="temoin-2">
+                            <div class="card text-center p-5 shadow-sm border-light bg-transparent text-white">
+                                <p class="fs-4 fst-italic">"Plateforme très utile pour dénicher des experts certifiés en
+                                    Afrique."</p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item" id="temoin-3">
+                            <div class="card text-center p-5 shadow-sm border-light bg-transparent text-white">
+                                <p class="fs-4 fst-italic">"Une expérience fluide, sécurisée. Je recommande vivement
+                                    AfriTalent."</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="carousel-indicators-css">
+                        <a href="#temoin-1" class="dot-indicator"></a>
+                        <a href="#temoin-2" class="dot-indicator"></a>
+                        <a href="#temoin-3" class="dot-indicator"></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
     <!-- PIED -->
-     <footer>
-        <img src="Images/Afritalent.baobab (1).png" alt="wawa" width="200px">
+    <footer>
+        <img src="Images/Afritalent_baobab.png" alt="wawa" width="200">
         <p>© 2026 AfriTalent</p>
-     </footer>
-    
+    </footer>
+
 
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-     <button id="btnRetour">▲ Haut</button>
+    <button id="btnRetour">▲ Haut</button>
     <script src="js/main.js"></script>
-    
+
 </body>
+
 </html>

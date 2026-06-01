@@ -1,120 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Afritalent-contact</title>
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
 </head>
+<!-- LES LIENS DU NAVBAR -->
+
 <body>
     <div id="fond-3d-contact"></div>
-     <header>
-   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="contact.html">
-                <img src="Images/Afritalent.baobab (1).png" alt="Logo AfriTalent" width="150">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" href="index.html">Accueil</a>
-                    <a class="nav-link" href="freelances.html">Freelances</a>
-                    <a class="nav-link" href="tarifs.html">Tarifs</a>
-                    <a class="nav-link" href="about.html">À propos</a>
-                    <a class="nav-link" href="contact.html">Contact</a>
-                    <button id="btnMode" class="btn btn-outline-light btn-sm ms-2">Mode Sombre</button>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="contact.html">
+                    <img src="Images/Afritalent_baobab.png" alt="Logo AfriTalent" width="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <div class="navbar-nav ms-auto">
+                        <a class="nav-link active" href="index.html">Accueil</a>
+                        <a class="nav-link" href="freelances.html">Freelances</a>
+                        <a class="nav-link" href="tarifs.html">Tarifs</a>
+                        <a class="nav-link" href="about.html">À propos</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
+                        <button id="btnMode" class="btn btn-outline-light btn-sm ms-2">Mode Sombre</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- LA PARTIE PRINCIPALE DE LA PAGE CONTACT -->
+    <main class="container my-5 pt-5">
+
+        <h1 class="text-center mb-5">Contact</h1>
+        <div class="row g-5">
+
+            <!-- Formulaire -->
+            <div class="col-lg-7">
+                <div class="card shadow-sm p-4 border-0">
+
+                    <form id="contactForm" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="nom" placeholder="Votre nom">
+                                <small id="e_nom" class="text-danger"></small>
+                            </div>
+
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Prénom</label>
+                                <input type="text" class="form-control" id="prenom" placeholder="Votre prénom">
+                                <small id="e_prenom" class="text-danger"></small>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
+                            <small id="e_email" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Sujet</label>
+                            <select class="form-select" id="sujet">
+                                <option value="">Choisissez un sujet</option>
+                                <option value="question">Question générale</option>
+                                <option value="support">Support technique</option>
+                                <option value="partenariat">Partenariat</option>
+                            </select>
+
+                            <small id="e_sujet" class="text-danger"></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="4"
+                                placeholder="Comment pouvons-nous vous aider ?"></textarea>
+                            <small id="e_message" class="text-danger"></small>
+                        </div>
+
+                        <button type="submit" class="btn btn-afritalent w-100 py-2">Envoyer le message</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Infos -->
+
+            <div class="col-lg-5">
+                <div class="mb-4">
+                    <h2>Nos coordonnées</h2>
+                    <hr class="w-25">
+                    <p class="mb-2"><strong>📍 Adresse :</strong> Dakar, Sénégal, Plateau</p>
+                    <p class="mb-2"><strong>📞 Téléphone :</strong> +221 77 000 00 00</p>
+                    <p class="mb-2"><strong>📧 Email :</strong> contact@afritalent.com</p>
+                </div>
+
+                <div class="rounded overflow-hidden shadow-sm">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123456!2d-17.446!3d14.692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzMxLjIiTiAxN8KwMjYnNDUuNiJX!5e0!3m2!1sfr!2ssn!4v1234567890"
+                        width="600" height="300" style="border:0; width: 100%;" allowfullscreen="" loading="lazy">
+                    </iframe>
                 </div>
             </div>
         </div>
-    </nav>
-</header>
-   <main class="container my-5 pt-5">
+    </main>
 
-<h2 class="text-center mb-5">Contact</h2>
-<div class="row g-5">
-
-<!-- Formulaire -->
-<div class="col-lg-7">
-            <div class="card shadow-sm p-4 border-0">
-
-<form id="contactForm" novalidate>
-            <div class="row">
-            <div class="col-md-6 mb-3">
-             <label class="form-label">Nom</label>
-            <input type="text" class="form-control" id="nom" placeholder="Votre nom">
-         <small id="e_nom" class="text-danger"></small>
-        </div>
-
-<div class="col-md-6 mb-3">
-     <label class="form-label">Prénom</label>
-    <input type="text" class="form-control" id="prenom" placeholder="Votre prénom">
-     <small id="e_prenom" class="text-danger"></small>
-        </div>
- </div>
-
-<div class="mb-3">
-<label class="form-label">Email</label>
-    <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
-   <small id="e_email" class="text-danger"></small>
- </div>
-
-<div class="mb-3">
-     <label class="form-label">Sujet</label>
- <select class="form-select" id="sujet">
-      <option value="">Choisissez un sujet</option>
-      <option value="question">Question générale</option>
-        <option value="support">Support technique</option>
-        <option value="partenariat">Partenariat</option>
-     </select>
-
-  <small id="e_sujet" class="text-danger"></small>
-                    </div>
-
-                    <div class="mb-3">
-                        <label class="form-label">Message</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Comment pouvons-nous vous aider ?"></textarea>
-                        <small id="e_message" class="text-danger"></small>
-                    </div>
-
-                    <button type="submit" class="btn btn-afritalent w-100 py-2">Envoyer le message</button>
-                </form>
-            </div>
-        </div>
-
-<!-- Infos -->
-
-<div class="col-lg-5">
-            <div class="mb-4">
-                <h4>Nos coordonnées</h4>
-                <hr class="w-25">
-                <p class="mb-2"><strong>📍 Adresse :</strong> Dakar, Sénégal, Plateau</p>
-                <p class="mb-2"><strong>📞 Téléphone :</strong> +221 77 000 00 00</p>
-                <p class="mb-2"><strong>📧 Email :</strong> contact@afritalent.com</p>
-            </div>
-
-            <div class="rounded overflow-hidden shadow-sm">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123456!2d-17.446!3d14.692!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQxJzMxLjIiTiAxN8KwMjYnNDUuNiJX!5e0!3m2!1sfr!2ssn!4v1234567890" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
-    </div>
-</main>
-
- <!-- PIED -->
-     <footer>
-        <img src="Images/Afritalent.baobab (1).png" alt="wawa" width="200px">
+    <!-- PIED -->
+    <footer>
+        <img src="Images/Afritalent_baobab.png" alt="wawa" width="200">
         <p>© 2026 AfriTalent</p>
-     </footer>
+    </footer>
 
 
 
@@ -123,7 +124,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <button id="btnRetour">▲ Haut</button>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>
