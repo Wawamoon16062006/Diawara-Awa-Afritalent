@@ -18,20 +18,12 @@
     --radius: 12px;
 }
 
-/* RESET CSS ET STYLES DE BASE  */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: var(--font-text);
     background-color: var(--light);
     color: var(--text-color);
-    line-height: 1.6;
     padding-top: 80px;
-}
+}  
 
 h1,
 h2,
@@ -42,7 +34,6 @@ h3 {
 }
 
 h2 {
-    font-size: 2rem;
     margin-bottom: calc(var(--margin) * 2);
 }
 
@@ -56,49 +47,36 @@ h2 {
     border-radius: 20px;
     transition: all 0.3s ease;
 }
-
+/* effet au survol */
 .navbar-dark .navbar-nav .nav-link:hover {
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    box-shadow: none;
+    color: var(--light);
 }
-
+/* met en évidence le lien actif de la navbar. */
 .navbar-dark .navbar-nav .nav-link.active {
-    color: #ffffff;
+    color: var(--light);
     font-weight: 600;
     background-color: rgba(255, 255, 255, 0.15);
 }
+/* STYLE POUR LE SCROLL */
 
-/* Structure globale des sections */
-.section-padding {
-    padding: var(--padding) 8%;
+.navbar.navbar-custom-scroll {
+    background-color: var(--secondary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-.bg-section-alt {
-    background-color: var(--brown);
-}
-
 /* 
    SECTION HERO */
 
 .hero {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 140px 8% 60px 8%;
-
-    min-height: 100vh;
-    width: 100%;
-
-    position: relative;
     margin-top: -80px;
-    z-index: 1;
 
     background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
         url('../Images/Accueil.png');
     background-size: cover;
-    background-position: center right;
-    background-repeat: no-repeat;
+    background-position: center ;
+
 }
 
 .carre {
@@ -122,14 +100,14 @@ h2 {
     font-weight: 900;
     line-height: 1.1;
     margin-bottom: 25px;
-    color: #ffffff;
+    color: var(--light);
     text-align: left;
     text-transform: uppercase;
     letter-spacing: -1px;
 }
 
 .text-gradient {
-    background: linear-gradient(90deg, #ffffff, var(--primary));
+    background: linear-gradient(90deg, var(--light), var(--primary));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -224,7 +202,7 @@ h2 {
 }
 
 .barbacue {
-    min-height: auto;
+
     padding: 60px 8%;
 
 }
@@ -241,7 +219,7 @@ h2 {
 
 .bento-grid .card,
 .grid .card {
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--light);
     border-radius: 8px;
     padding: 20px 15px;
     background: var(--secondary);
@@ -249,6 +227,250 @@ h2 {
     text-align: center;
     font-weight: 500;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/*ET EFFETS HOVER*/
+
+.titre-categories {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease bacground-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+    background-color: var(--light);
+   
+}
+
+/* CAROUSEL */
+
+/* Le conteneur qui gère le glissement horizontal */
+.custom-carousel-inner {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Aligne pile sur un témoignage */
+    scroll-behavior: smooth;       /* Animation fluide au clic */
+    scrollbar-width: none;         /* Cache la barre de défilement (Firefox) */
+}
+
+/* Cache la barre de défilement (Chrome, Safari, Edge) */
+.custom-carousel-inner::-webkit-scrollbar {
+    display: none;
+}
+
+/* Chaque carte prend 100% de la largeur */
+.custom-carousel-item {
+   flex: 0 0 100%;/*force chaque temoignage a prendre exactement toute la largeur de l'écran */
+    scroll-snap-align: start; /* C'est le repère qui indique au navigateur d'aimanter le bord gauche de la carte pile sur le bord gauche de l'écran.    */
+    padding: 0 15px;
+}
+
+/* Positionnement des points de navigation */
+.custom-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* Style des points */
+.custom-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease; /* Fait varier la couleur ou la taille des points en douceur au survol de la souris. */
+    display: inline-block; /* Permet de donner une taille aux points tout en les alignant côte à côte. */
+}
+
+/* Changement de couleur au survol ou clic */
+.custom-dot:hover, 
+.custom-dot:focus {
+    background-color: var(--primary);
+    transform: scale(1.2);
+    outline: none;
+}
+/*SECTION TÉMOIGNAGES */ 
+
+.awa h2 {
+    color: var(--primary);
+}
+
+.awa .card {
+    border-left: 6px solid var(--primary);
+    border-right: 6px solid var(--primary);
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+/* FREELANCES */
+
+/* --- CARTES CUSTOM --- */
+.custom-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    overflow: hidden !important;
+    
+}
+
+.custom-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.custom-card .card-img-top {
+    height: 300px;
+    object-position: top center;
+    border-radius: var(--radius) var(--radius) 0 0 !important;
+}
+
+/* --- BOUTON AFRITALENT --- */
+.btn-afritalent {
+    background-color: var(--primary);
+    color: var(--light);
+    border-radius: 50px;
+    padding: 8px 15px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-afritalent:hover {
+    background-color: var(--dark);
+    color: var(--light);
+    transform: scale(1.03);
+}
+ 
+/* RESPONSIVITE */
+
+/* ==========================================================================
+   1. TOUS LES SMARTPHONES (Jusqu'à 576px) 
+   ========================================================================== */
+@media (max-width: 576px) {
+    body {
+        padding-top: 70px;
+    }
+
+    /* La grille Bento passe à 1 colonne pour TOUS les mobiles (444px inclus) */
+    .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .momo,
+    .hero {
+        padding: 100px 4% 40px 4%;
+    }
+
+    .hero-button {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Ajustements généraux pour le fond des images sur mobile */
+    .barbacue,
+    .awa {
+        min-height: 180px;
+        background-size: cover;
+        background-position: center;
+        padding: 25px 15px;
+    }
+
+    .barbacue h1,
+    .awa h1,
+    .hero h1 {
+        font-size: 1.4rem; /* Légèrement plus grand pour les grands mobiles */
+    }
+}
+@media (max-width: 576px) {
+    /* ... tes autres styles mobiles ... */
+
+    .hero {
+        /* Force l'image à se centrer sur téléphone */
+        background-position: center; 
+        
+        /* change le dégradé en mode vertical (du haut vers le bas) 
+           pour que le texte du haut reste lisible sur mobile */
+        background-image: linear-gradient(180deg, rgba(15, 23, 42, 0.95) 40%, rgba(15, 23, 42, 0.4) 100%),
+            url('../Images/Accueil.png');
+    }
+}
+/* ==========================================================================
+   2. EXCLUSIF PETITS MOBILES (Écrans très étroits de moins de 375px)
+   ========================================================================== */
+@media (max-width: 375px) {
+    /* réduit encore un peu les titres uniquement pour les mini-écrans */
+    .barbacue h1,
+    .awa h1,
+    .hero h1 {
+        font-size: 1.1rem;
+    }
+}
+
+/* ==========================================================================
+   3. TOUS LES MOBILES & TABLETTES (Jusqu'à 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background-color: var(--secondary);
+        padding: 20px;
+        border-radius: var(--radius);
+        margin-top: 10px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        margin-left: 0;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+
+    .barbacue,
+    .awa {
+        background-attachment: scroll;
+    }
+}
+
+/* ==========================================================================
+   4. TABLETTES EN MODE PAYSAGE (Entre 768px et 991px)
+   ========================================================================== */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==========================================================================
+   5. ÉCRANS D'ORDINATEURS (À partir de 992px)
+   ========================================================================== */
+@media (min-width: 992px) {
+    .bento-grid .card:nth-child(1) {
+        grid-column: span 2;
+        background-color: var(--secondary);
+        color: var(--light);
+    }
+
+    .bento-grid .card:nth-child(4) {
+        grid-column: span 2;
+        border-left: 6px solid var(--primary);
+    }
+}
+
+/* ==========================================================================
+   6. GRANDS ÉCRANS (À partir de 1200px)
+   ========================================================================== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
 
 @media (min-width: 992px) {
@@ -276,284 +498,32 @@ h2 {
         background-attachment: scroll;
     }
 }
+/* Centrage propre sur mobile FOOTER */
+@media (max-width: 767px) {
 
-/*ET EFFETS HOVER*/
-
-.titre-categories {
-    color: #b6593a;
-    font-weight: 600;
-}
-
-.card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
-    background-color: #ffffff;
-}
-
-/* CAROUSEL */
-.carousel-sans-js .carousel-inner {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-}
-
-.carousel-sans-js .carousel-inner::-webkit-scrollbar {
-    display: none;
-}
-
-.bento-grid .card:hover,
-.carousel-sans-js .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-.carousel-sans-js .carousel-item {
-    display: block;
-    margin-right: 0;
-    flex: 0 0 100%;
-    width: 100%;
-    scroll-snap-align: start;
-    padding: 0 15px;
-}
-
-.carousel-indicators-css {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.dot-indicator {
-    width: 30px;
-    height: 3px;
-    background-color: rgba(255, 255, 255, 0.5);
-    transition: background-color 0.3s ease;
-    display: inline-block;
-}
-
-.dot-indicator:hover,
-.dot-indicator:focus {
-    background-color: var(--primary);
-    outline: none;
-}
-
-/*SECTION TÉMOIGNAGES */
-.awa {
-    padding: 60px 8% 80px 8%;
-    text-align: center;
-}
-
-.awa h2 {
-    color: var(--primary);
-    margin-bottom: 30px;
-}
-
-.awa .card {
-    border-left: 6px solid var(--primary);
-    border-right: 6px solid var(--primary);
-    font-style: italic;
-    background-color: transparent;
-    color: var(--primary);
-    padding: 30px;
-    max-width: 750px;
-    margin: 0 auto;
-}
-
-/* FREELANCES */
-
-/* --- CARTES CUSTOM --- */
-.custom-card {
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    height: 100%;
-}
-
-.custom-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-}
-
-.custom-card .card-img-top {
-    height: 300px;
-    object-fit: cover;
-    width: 100%;
-    object-position: top center;
-    border-radius: var(--radius) var(--radius) 0 0;
-}
-
-/* --- BOUTON AFRITALENT --- */
-.btn-afritalent {
-    background-color: var(--primary);
-    color: white;
-    border-radius: 50px;
-    padding: 8px 15px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-afritalent:hover {
-    background-color: var(--dark);
-    color: white;
-    transform: scale(1.03);
-}
-
-/* --- SECTION DE FOND --- */
-.momo {
-    background-image: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 35%, rgba(15, 23, 42, 0.6) 65%, rgba(0, 0, 0, 0) 100%),
-        url('../Images/freelance.png');
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 140px 8% 60px 8%;
-
-    min-height: 100vh;
-    width: 100%;
-
-    position: relative;
-    margin-top: -80px;
-    z-index: 1;
-    background-size: 100% 100%;
-    background-position: center right;
-    background-repeat: no-repeat;
-}
-
-/* RESPONSIVITE */
-
-/* ==========================================================================
-   1. EXCLUSIF PETITS MOBILES (Cible : Écrans étroits de 357px à 375px)
-   ========================================================================== */
-@media (max-width: 400px) {
-
-    /* Évite que la grille Bento ne tente de faire plusieurs colonnes */
-    .bento-grid {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
-    }
-
-    /* Le correctif pour tes images de fond (.barbacue et .awa) */
-    .barbacue,
-    .awa {
-        min-height: 180px !important;
-        /* Hauteur basse adaptée pour éviter le zoom moche */
-        background-size: cover !important;
-        /* L'image s'adapte sans se déformer */
-        background-position: center !important;
-        /* Reste bien centrée */
-        padding: 25px 15px !important;
-        /* Réduit l'espace pour que le texte ne pousse pas l'image */
-    }
-
-    /* Réduit la taille des gros titres pour qu'ils ne dépassent pas de l'écran */
-    .barbacue h1,
-    .awa h1,
-    .hero h1 {
-        font-size: 1.3rem !important;
-    }
-}
-
-/* ==========================================================================
-   2. SMARTPHONES STANDARDS (Jusqu'à 576px)
-   ========================================================================== */
-@media (max-width: 576px) {
-    body {
-        padding-top: 70px;
-        /* Un peu moins de padding haut sur mobile */
-    }
-
-    .momo,
-    .hero {
-        padding: 100px 4% 40px 4%;
-    }
-
-    .hero-button {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* ==========================================================================
-   3. TOUS LES MOBILES & TABLETTES (Jusqu'à 991px)
-   ========================================================================== */
-@media (max-width: 991px) {
-    .navbar-collapse {
-        background-color: var(--secondary);
-        padding: 20px;
-        border-radius: var(--radius);
-        margin-top: 10px;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .navbar-dark .navbar-nav .nav-link {
-        margin-left: 0;
-        margin-bottom: 8px;
+    /* Cible les écrans mobiles */
+    footer {
         text-align: center;
+        /* Centre tout le texte du footer sur mobile */
     }
 
-    /* Sécurité pour que les images défilent bien sur les téléphones */
-    .barbacue,
-    .awa {
-        background-attachment: scroll;
-    }
-}
-
-/* ==========================================================================
-   4. TABLETTES EN MODE PAYSAGE (Entre 768px et 991px)
-   ========================================================================== */
-@media (min-width: 768px) and (max-width: 991px) {
-    .bento-grid {
-        grid-template-columns: repeat(2, 1fr);
+    .footer-links .me-3 {
+        /* Cible les liens individuels */
+        margin-right: 10px;
+        /* Réduit l'espacement entre les liens sur mobile */
+        margin-left: 10px;
+        /* Ajoute un peu d'espacement à gauche pour éviter que les liens ne soient collés */
     }
 }
 
-/* ==========================================================================
-   5. ÉCRANS D'ORDINATEURS (À partir de 992px)
-   ========================================================================== */
-@media (min-width: 992px) {
-    .bento-grid .card:nth-child(1) {
-        grid-column: span 2;
-        background-color: var(--secondary);
-        color: #ffffff;
-        /* Corrigé : texte blanc pour contrer le fond sombre */
-    }
-
-    .bento-grid .card:nth-child(4) {
-        grid-column: span 2;
-        border-left: 6px solid var(--primary);
-    }
-}
-
-/* ==========================================================================
-   6. GRANDS ÉCRANS (À partir de 1200px)
-   ========================================================================== */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
-}
-
-/* style pour faq */
+/* Styles globaux (FAQ) */
 .accordion-item {
-    background-color: #ffffff;
-    border: 1px solid #e2e8f0;
+    background-color: var(--light);
+    border: 1px solid var(--light);
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: rgba(182, 89, 58, 0.1);
+    background-color: rgba(182, 89, 58, 0.1);   /* Ce code change l'apparence du bouton de l'accordéon uniquement lorsqu'il est ouvert, en lui appliquant un fond orange très clair et transparent avec un texte de la couleur principale. */
     color: var(--primary);
 }
 
@@ -563,7 +533,6 @@ h2 {
     background-color: var(--secondary);
     color: var(--light);
 }
-
 /*STYLE DARK MODE  */
 
 body {
@@ -584,27 +553,7 @@ body.dark footer {
 }
 
 .nav-link {
-    color: #ffffff;
-}
-
-
-/* STYLE POUR LE SCROLL */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: transparent;
-    box-shadow: none;
-    border: none;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.navbar.navbar-custom-scroll {
-    background-color: var(--secondary);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    color: var(--light);
 }
 
 
@@ -614,9 +563,8 @@ body.dark footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 99;
     background-color: var(--primary);
-    color: white;
+    color: var(--light);
     border: none;
     padding: 10px 15px;
     border-radius: 5px;
@@ -645,12 +593,6 @@ body.dark footer {
     padding: 140px 8% 80px 8%;
 }
 
-.hero-stats {
-    display: flex;
-    gap: 40px;
-    margin-top: 35px;
-}
-
 
 .compteur {
     font-family: var(--font-title);
@@ -658,14 +600,7 @@ body.dark footer {
     font-weight: 900;
     color: var(--primary);
     margin: 0;
-    line-height: 1;
-}
-
-.stat-item p {
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.7);
-    margin-top: 5px;
-    font-weight: 500;
+    
 }
 
 /*Animation de fond 3D avec Three.js */
@@ -677,14 +612,9 @@ body.dark footer {
     height: 100vh;
     z-index: -1;
     pointer-events: none;
-    background-color: #0a0a3d;
+    background-color: var(--dark);
 }
 
-
-.card {
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(4px);
-}
 
 #fond-3d-about {
     position: fixed;
@@ -694,73 +624,81 @@ body.dark footer {
     height: 100vh;
     z-index: -1;
     pointer-events: none;
-    background-color: #0a0a3d;
+    background-color: var(--dark);
 }
+
 
 #fond-3d-contact {
     position: fixed;
     top: 0;
+    /* Positionne le fond en haut de la page */
+    left: 0;
+    /* Positionne le fond en haut à gauche de la page */
+    width: 100%;
+    /* Assure que le fond couvre toute la largeur de la page */
+    height: 100vh;
+    /* Assure que le fond couvre toute la hauteur de la page, même si le contenu est long */
+    z-index: -1;
+    /* Assure que le fond reste derrière tout le contenu */
+    pointer-events: none;
+    /* Permet de cliquer à travers le fond pour interagir avec les éléments de la page */
+    background-color: var(--dark);
+    /* Fond sombre pour le contact aussi, pour garder une cohérence visuelle */
+}
+#fond-3d-freelances {
+    position: fixed; /* bloque le fond par rapport à l'écran, il ne bougera plus au scroll */
+    top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
-    z-index: -1;
-    pointer-events: none;
-    background-color: #0a0a3d;
+    height: 100vh;  /* Prend toute la hauteur de la fenêtre */
+    z-index: -1;    /* Reste bien derrière tes cartes et tes sections */
+    
+    /* Ton dégradé bleu nuit */
+    background-color: var(--dark);
+    overflow: hidden;
 }
-
 /* couleur pour les titres des freelances et les titres de sections */
 .titre {
     color: var(--primary);
-
+}
+.offcanvas-title{
+    color: var(--light);
 }
 
 /* FOOTER */
 footer {
-    padding: 50px 8% 30px 8%;
-    background-color: var(--secondary);
-    border-top: 3px solid var(--primary);
-    color: rgba(255, 255, 255, 0.8);
-    /* Applique la couleur claire à tout le texte */
+    background-color: var(--secondary);/* Fond sombre pour le footer */
+    border-top: 3px solid var(--primary); /* Bordure de séparation du haut du footer */
+    color: rgba(255, 255, 255, 0.8);/* Couleur claire pour le texte du footer */
+
 }
 
 /* Style de tous les paragraphes du footer */
 footer p,
 footer span {
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.7);/* Couleur légèrement plus claire pour les paragraphes et les spans du footer */
 }
 
 /* Style des titres de colonnes */
 footer h5 {
-    color: #ffffff;
-    font-weight: 600;
+    color: var(--light);/* Couleur blanche pour les titres du footer */
+    font-weight: 600;/* Titre en blanc pour les différencier du reste du texte */
 }
 
 /* Gestion propre de tous les liens pour éviter les conflits Bootstrap */
 .footer-links a {
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: color 0.2s ease-in-out;
+    color: rgba(255, 255, 255, 0.7); /* Couleur claire pour les liens du footer */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    transition: color 0.2s ease-in-out;/* Transition douce pour le changement de couleur au survol */
 }
 
 /* Effet au survol : les liens s'allument en blanc */
 .footer-links a:hover {
-    color: #ffffff;
+    color: var(--light); /* Couleur blanche au survol pour faire ressortir les liens */
 }
 
 /* Bordure de séparation du bas personnalisée */
 .footer-bottom.border-top {
-    border-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.1); /* Couleur très claire pour la bordure du bas */
 }
 
-/* Centrage propre sur mobile */
-@media (max-width: 767px) {
-    footer {
-        text-align: center;
-    }
-
-    .footer-links .me-3 {
-        margin-right: 10px;
-        margin-left: 10px;
-    }
-}

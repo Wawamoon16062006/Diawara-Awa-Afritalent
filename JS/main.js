@@ -1,6 +1,6 @@
 // COMMIT 6
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () { 
 
     // LES ÉLÉMENTS HTML
     var boutonMode = document.getElementById('btnMode');// BOUTON MODE SOMBRE
@@ -411,4 +411,116 @@ document.addEventListener('DOMContentLoaded', function () {
             renderer.setSize(window.innerWidth, window.innerHeight);
         });
     }
+    // CODE 3D CARTE DE L'AFRIQUE LUMINEUSE (CONTOURS) POUR PAGE FREELANCES
+
+// CODE 3D NUAGE DE PARTICULES AFRIQUE (FOND BLEU & SANS IMAGE) - CORRIGÉ
+var conteneurFreelances = document.getElementById('fond-3d-freelances');
+
+if (conteneurFreelances) {
+    const scene = new THREE.Scene();
+    
+    // Configurer la caméra
+    const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 1000);
+    camera.position.z = 75; 
+
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    conteneurFreelances.appendChild(renderer.domElement);
+
+    // 1. Définition des sommets du polygone de l'Afrique
+    const sommetsAfrique = [
+        {x: -10, y: 35},  {x: 0, y: 34},   {x: 15, y: 30},  {x: 23, y: 23},
+        {x: 32, y: 10},  {x: 25, y: -5},  {x: 18, y: -20}, {x: 13, y: -33},
+        {x: 5, y: -20},  {x: 0, y: -10},  {x: -4, y: -2},  {x: -5, y: 5},
+        {x: -25, y: 5},  {x: -31, y: 14}, {x: -27, y: 22}, {x: -17, y: 30}
+    ];
+
+    // Fonction mathématique Ray-Casting
+    function estDansPolygone(pt, poly) {
+        let dedans = false;
+        for (let i = 0, j = poly.length - 1; i < poly.length; j = i++) {
+            let xi = poly[i].x, yi = poly[i].y;
+            let xj = poly[j].x, yj = poly[j].y;
+            let intersecte = ((yi > pt.y) !== (yj > pt.y)) && (pt.x < (xj - xi) * (pt.y - yi) / (yj - yi) + xi);
+            if (intersecte) dedans = !dedans;
+        }
+        return dedans;
+    }
+
+    const positions = [];
+    const donneesInitiales = [];
+    const nbParticulesCibles = 1200; //  Espace supprimé ici
+    let particulesTrouvees = 0;
+
+    // 2. Génération des particules à l'intérieur de la forme
+    while (particulesTrouvees < nbParticulesCibles) {
+        let testPt = {
+            x: (Math.random() * 63) - 31, 
+            y: (Math.random() * 68) - 33  
+        };
+
+        if (estDansPolygone(testPt, sommetsAfrique)) {
+            const posX = testPt.x * 1.3;
+            const posY = testPt.y * 1.3;
+            const posZ = (Math.random() - 0.5) * 5; 
+
+            positions.push(posX, posY, posZ);
+            donneesInitiales.push({ x: posX, y: posY, zOrigine: posZ });
+            particulesTrouvees++;
+        }
+    }
+
+    const geoAfrique = new THREE.BufferGeometry();
+    geoAfrique.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+    // 3. Style Lumineux Cuivré
+    const matiereAfrique = new THREE.PointsMaterial({
+        color: 0xb6593a, 
+        size: 1.4, 
+        transparent: true,
+        opacity: 0.85,
+        blending: THREE.AdditiveBlending 
+    });
+
+    const nuageAfrique = new THREE.Points(geoAfrique, matiereAfrique);
+    scene.add(nuageAfrique);
+
+    let horloge = 0;
+
+    // 4. Boucle d'animation
+    function animationFreelances() {
+        requestAnimationFrame(animationFreelances);
+
+        horloge += 0.015;
+        const coords = geoAfrique.attributes.position.array;
+        let indexDonnees = 0;
+
+        for (let i = 0; i < coords.length; i += 3) {
+            const pt = donneesInitiales[indexDonnees];
+            
+            // Effet d'onde sur l'axe Z
+            coords[i + 2] = pt.zOrigine + Math.sin(pt.x * 0.15 + horloge) * 6 + Math.cos(pt.y * 0.15 + horloge) * 6;
+            
+            // Scintillement sur X et Y
+            coords[i] = pt.x + Math.sin(horloge * 1.5 + i) * 0.08;
+            coords[i + 1] = pt.y + Math.cos(horloge * 1.5 + i) * 0.08;
+            
+            indexDonnees++;
+        }
+
+        geoAfrique.attributes.position.needsUpdate = true;
+
+        nuageAfrique.rotation.y = Math.sin(horloge * 0.1) * 0.15;
+        nuageAfrique.rotation.x = 0.05;
+
+        renderer.render(scene, camera);
+    }
+    animationFreelances();
+
+    window.addEventListener('resize', function () {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+}
 });
